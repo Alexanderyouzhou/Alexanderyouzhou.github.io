@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/* 标签样式初始化 */
+        body,html{margin:0;padding:0;background:#fff;font-size:14px;font-family:Arial,Helvetica,'STHeiti','Microsoft YaHei','sans-serif'}
+        form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+        img{border:0;}
+        ul,li{list-style-type:none;}
+        a{color:#00007F;text-decoration:none;}
+        a:hover{text-decoration:none;}
+	    #oUl
+	    {
+	    	width: 1800px;
+	    	height: 400px;
+	    	margin: 0 auto;
+	    	position: absolute;
+	    	left: 0;
+	    	top: 0;
+	    	transition: all 1.5s;
+	    }
+		#oUl li{
+          float: left;
+		}
+		#oUl li img{
+			width: 600px;
+			height: 400px;
+		}
+		#cansee{
+			width: 600px;
+			height: 400px;
+			overflow: hidden;
+			border: 1px solid;
+			position: relative;
+		}
+		#left,#right{
+			position: absolute;
+			z-index: 10;
+			
+		}
+		#left{
+			top: 150px;
+		}
+		#right{
+			top: 150px;
+			left: 550px;
+		}
+		#ul1{
+			position: absolute;
+			top: 370px;
+			left: 200px;
+		}
+		#ul1 li
+		{
+			width: 20px;
+			height: 20px;
+			background: black;
+			border-radius: 50%;
+			display: inline-block;
+		}
+		#ul1 li.active{
+			background: orange;
+		}
+		
+	</style>
+</head>
+<body>
+<div id="cansee">
+	<ul id="oUl">
+		<li><img src="img/1.jpg" alt=""></li>
+		<li><img src="img/2.jpg" alt=""></li>
+		<li><img src="img/3.jpg" alt=""></li>
+		<li><img src="img/4.jpg" alt=""></li>
+		<li><img src="img/5.jpg" alt=""></li>
+
+	</ul>
+	
+	<ul id="ul1">
+   	 <li class="active"></li>
+   	 <li class="active"></li>
+   	 <li class="active"></li>
+   	 <li class="active"></li>
+   	 <li class="active"></li>
+   </ul>
+</div>
+  
+<script>
+	var oUl=document.getElementById('oUl');
+	var oImg=oUl.getElementsByTagName('img');
+	var oCansee=document.getElementById('cansee');
+	var index=0;
+	oUl.style.width=oImg[0].width*oImg.length+'px';
+	var iTimer;
+	function it()
+	{	
+		var derail;
+		//console.log(index);
+		
+
+		console.log(index)
+		clearInterval(iTimer);
+	    iTimer=setInterval(function(){
+        index++;
+        if(index>oImg.length-1)
+        {
+        	index=0;
+        }
+		//新知识 获取img标签的宽度 width 无括号
+		oUl.style.left=index*-oImg[0].width+'px';
+		changestyle(index);
+	  },5000)
+	}
+
+	//左右箭头点击事件
+	// var left=document.getElementById('left');
+	// var right=document.getElementById('right');
+	// left.onclick=function left1()
+	// {
+	// 	index++;
+ //        if(index>oImg.length-1)
+ //        {
+ //        	index=0;
+ //        }
+ //        theclick(index);
+ //        changestyle(index);
+	// 	//oUl.style.left=index*-oImg[0].width+'px';
+	// }
+	// right.onclick=function right1()
+	// {
+	// 	//index=oImg.length-1;
+	// 	index--;
+ //        if(index<0)
+ //        {
+ //        	index=oImg.length-1;
+ //        }
+ //        theclick(index);
+ //        changestyle(index);
+	// 	//oUl.style.left=index*-oImg[0].width+'px';
+	// }
+	
+
+	var ul1=document.getElementById('ul1'); //获取父级
+	var li1=ul1.getElementsByTagName('li'); //获取父级下的标签名
+	li1[0].style.background="blue";//刷新页面图标的颜色就应该是蓝的
+	function changestyle(obj)
+	{	
+		for(var i=0;i<li1.length;i++)
+           {
+    		li1[i].style.background='';//不写循环只能点一个 进了onclick只能执行一次
+    	   } 
+    	   li1[obj].style.background="blue";
+	}
+
+	//1~5按钮的点击事件
+	click();
+	function click(){
+		for (var i = 0; i < li1.length; i++) {
+			myclick(i);
+		};
+		function myclick(i){
+
+		li1[i].onclick=function(){
+			oUl.style.left=i*-oImg[0].width+'px';
+			changestyle(i);
+			// console.log(i);
+			index=i;
+			//把index替换成i  
+		}
+	}
+}
+
+//======================================
+    it();
+	oCansee.onmouseover=function(){
+		clearInterval(iTimer);
+	}
+	oCansee.onmouseout=function(){
+		it();
+	}
+</script>
+</body>
+</html>
