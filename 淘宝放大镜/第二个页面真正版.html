@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="swiper/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+	<style type="text/css">
+		#wrap{
+		width: 1200px;
+		height: 3000px;
+		border: 1px solid orange;
+		margin: 0 auto;
+	}
+	/*.swiper-pagination-bullet{
+		width: 15px;
+		height: 15px;
+		background:;
+		border: 1px solid white;
+	}
+	.swiper-pagination-bullet-active{
+	background:#fff;
+}*/
+	.top{
+		width: 100%;
+		height: 25px;
+		/*border: 1px solid;*/
+		line-height: 25px;
+		margin-bottom: 10px;
+		overflow: hidden;		
+	}
+	.top a{
+		color: rgb(211,211,211);
+		font-size: 12px;
+		text-decoration:none;
+	}
+	.top a:hover{
+		color: rgb(203,43,47);
+	}
+	.top-left a{		
+		margin-left: 5px;
+		float: left;
+	}
+	.top-right a{		
+		margin-left: 8px;
+		float: right;
+	}
+	/*top1完成*/
+	.top2{
+		width: 100%;
+		height: 40px;
+		/*border: 1px solid;*/
+		margin-bottom: 35px;
+	}
+	.top2-left{
+		display: inline-block;
+	}
+	.top2-mid div{
+		margin-left: 20px;
+		color: rgb(60,62,62);
+		text-decoration:none;
+		display:inline-block;
+		/*border: 2px solid;*/
+		height: 35px;
+	}
+	.top2first{
+		display: inline-block;
+		margin-left: 60px;
+		font-size: 12px;
+		background: rgb(245,245,245);
+		color: rgb(200,200,200);					
+	}
+	.top2second{
+		display: inline-block;
+		margin-left: 20px;
+		font-size: 12px;	
+		background: rgb(245,245,245);
+		color: rgb(200,200,200);					
+	}
+	.top2-mid div:hover{
+		color: rgb(203,43,47);
+		border-bottom: 2px solid;		
+	}
+	.top2-mid{
+		margin: 18px auto;
+		display: inline-block;
+		font-size: 18px;
+	}
+	.top2-right{
+		display: inline-block;
+		width: 250px;
+		height: 100%;
+		/*border: 1px solid;*/
+		margin-top: 15px;
+		margin-left: 10px;
+		float: right;
+	}
+	.oneline{
+		width: 200px;
+		/*height: 1px;*/
+		border: 1px solid rgb(180,180,180);
+		margin-left: 50px;
+	}
+	.hr-10{
+		width: 100%;
+		height: 5px;
+		background: rgb(231,231,231);
+		border: 1px solid rgb(231,231,231);
+	}
+	.g a{
+		color: black;
+		text-decoration: none;
+	}
+	.g a:hover{
+		color: red;
+	}
+
+	/*开始创建图片事件*/
+	#small{
+		width: 450px;
+		height: 450px;
+		border: 1px solid;
+		margin-top: 20px;
+		margin-left: 20px;
+		/*background-image: url(pho/8.jpg);
+		background-size: 100% 100%;*/
+		position: relative;
+	}
+
+	.cube{
+		width: 380px;
+		height: 58px;
+		/*border: 1px solid;*/
+		margin-left: 55px;
+		margin-top: 50px;
+	}
+	#bottom: {
+		border: 1px solid red;
+	}
+	/*#gogo{
+		background-image:url("pho/7.png")
+
+	}*/
+	.smallcube{
+		text-align: center;
+	}
+	.suit{
+		width: 100%;
+		height: 450px;
+	}	
+
+	/*开始弄右边的大图*/
+	.big{
+		width: 450px;
+		height: 450px;
+		border: 1px solid;
+		/*background: url(img/1000.jpg)no-repeat;*/
+		background-size: 1800px 1800px;
+		position: absolute;
+		top: 160px;
+		left: 600px;
+		overflow: hidden;
+		display: none;
+		/*position: relative;*/
+		/*display: none;*/
+	}
+	.suit2{
+		width: 1800px;
+		height: 1800px;
+	}
+	#mengdiv{
+		width: 100px;
+		height: 100px;
+		background: white;
+		opacity: 0.5;
+		position: absolute;
+		display: none;
+		/*z-index: 10;*/
+	}
+	#small{
+		background-image: url(pho/8.jpg);
+		background-size: 450px 450px;
+	}
+
+
+	
+	</style>
+</head>
+<body>
+<div id="wrap">
+		<div class="top">
+		<div class="top-left">
+			<a href="">华为官网 &nbsp;&nbsp;|&nbsp;</a>
+			<a href=""> 荣耀官网 &nbsp;&nbsp;|&nbsp;</a>
+			<a href=""> 花粉俱乐部 &nbsp;&nbsp;|&nbsp;</a>
+			<a href=""> 帮助中心 &nbsp;&nbsp;|&nbsp;</a>
+			<a href=""> v码(优购码) &nbsp;&nbsp;|&nbsp;</a>
+			<a href=""> Select Region &nbsp;&nbsp;|&nbsp;</a>
+			<a href=""> 更多精彩 </a>			
+		</div>
+		<div class="top-right">
+			<a href="">请登录 |</a>
+			<a href="">注册&nbsp; |</a>
+			<a href="">我的订单&nbsp; |</a>
+			<a href="">购物车</a>			
+		</div>		
+	</div>
+
+	<!-- 顶部布局完成 -->
+	<div class="top2">
+		<div class="top2-left">
+			<img src="img/1.png">
+		</div>
+		<div class="top2-mid">
+			<div>华为专区</div>
+			<div>荣耀专区</div>
+			<div>HUAWEI P10</div>
+			<div>荣耀9</div>
+			<div>华为品质节</div>
+			<div>荣耀换新机</div>
+		</div>
+		<div class="top2-right">
+			<p class="top2first">HUAWEI nova 2</p>
+			<p class="top2second">荣耀8青春版</p>
+			<div class="oneline"></div>
+			<div></div>			
+		</div>
+	</div>
+
+	<!-- /////////////////////////////////////// -->
+	<div class="hr-10"></div>
+	<div class="g">
+		<a href="">首页 ></a>
+		<a href="">手机 ></a>
+		<a href="">荣耀 ></a>
+		<span id="proname">荣耀8青春版 全网通标配版 (流光金)</span>
+	</div>
+
+	<!-- 左侧的图片 开始作业放大镜-->
+	<div id="small">
+		<div id="mengdiv"></div>
+	</div>
+		<div class="big">
+		<!-- <div class="swiper-container" id="rightbox">
+			<div class="swiper-wrapper bigbox">
+					<div class="swiper-slide box" >
+						<img class="suit2"src="pho/8.jpg">
+					</div>
+					<div class="swiper-slide box" >
+						<img class="suit2"src="pho/9.jpg">
+					</div>
+					<div class="swiper-slide box">
+						<img class="suit2"src="pho/10.jpg">
+					</div>
+					<div class="swiper-slide box" >
+						<img class="suit2"src="pho/11.jpg">
+					</div>
+					<div class="swiper-slide box">
+						<img class="suit2"src="pho/12.jpg">
+					</div>
+					<div class="swiper-slide box">
+						<img class="suit2"src="pho/13.jpg">
+					</div>
+				</div> -->
+		</div>
+	<!-- 轮播图完成 开始作业轮播图下方的块 -->
+	<div class="cube">
+		<!-- 开始放swiper -->
+		<div class="swiper-container" id="bottom">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide smallcube">
+					<img src="pho/1.png">
+				</div>
+				<div class="swiper-slide smallcube">
+					<img src="pho/2.png">
+				</div>
+				<div class="swiper-slide smallcube">
+					<img src="pho/3.png">
+				</div>
+				<div class="swiper-slide smallcube">
+					<img src="pho/4.png">
+				</div>
+				<div class="swiper-slide smallcube">
+					<img src="pho/5.png">
+				</div>
+				<div class="swiper-slide smallcube">
+					<img src="pho/6.png">
+				</div>
+			</div>
+			<div class="swiper-button-prev" id="gogo"></div>
+			<div class="swiper-button-next" id="gogo"></div>
+			<!-- 更改箭头样式 -->
+			<div class="swiper-button-prev swiper-button-black"></div>
+			<div class="swiper-button-next swiper-button-black"></div>
+			<!-- 想要更改箭头样式试着创一个id改变他的background-image:url()  这种办法不可行结果就是俩个都有 想的话更改源代码-->
+		</div>
+	</div>
+
+	<!-- 开始创建右边的大图 -->
+	
+	</div>
+	<!-- 右边的图片里的录播效果 -->
+</div>
+</body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js">	
+</script>
+<script type="text/javascript" src="swiper/swiper-3.4.2.min(1).js">
+</script>
+<script type="text/javascript">
+	var swiper1=new Swiper("#bottom",{
+		prevButton:".swiper-button-prev",
+		nextButton:".swiper-button-next",
+		slidesPerView:5,
+		slidesPerGroup:1,
+		// touchRatio : 3,
+	})
+	var swiper2 = new Swiper("#top",{
+		// slidesPerView:3
+	})
+	// swiper1.on("slideChangeEnd",function (sss) {
+		
+	// 	// 修改外框
+	// 	// swiper2.slides[sss.realIndex].style.border = "1px solid red";
+	// 	pagination : '.swiper-pagination',
+	// 	observer:true,
+	// 	console.log(sss.realIndex);
+	// 	swiper2.slideTo(sss.realIndex,1000,false);
+	// })
+	var a=$(".smallcube")
+	//没写钱
+	console.log(a)
+	for (var i = 0; i < a.length; i++) {
+		a[i].index=i
+	
+	a.on("mouseover",function(){
+		
+
+		console.log(this.index)
+		var x=this.index+7
+		console.log(x)
+		a.css({"border":"none"})
+		$(this).css({"border":"1px solid red"})
+		$("#small").css({"background-image":"url(pho/"+x+".jpg)",backgroundSize:"450px 450px"})
+
+		$(".big").css({"background-image":"url(pho/"+x+".jpg)",backgroundSize:"1800px 1800px"})
+	})
+}
+
+	//开始创建放大镜
+	
+	$("#small").mouseover(function(){
+		$("#mengdiv").show();
+		$(".big").show();
+		$(this).mousemove(function(e){
+			var x=e.clientX-$("#mengdiv").width()/2-$(this).offset().left;
+			var y=e.clientY-$("#mengdiv").height()/2-$(this).offset().top; 
+			if (x<0) {
+				x=0
+			}if (x>$(this).width()-$("#mengdiv").width()) {
+				x=x>$(this).width()-$("#mengdiv").width()
+			}if (y<0) {
+				y=0
+			}if (y>$(this).height()-$("#mengdiv").height()) {
+				y=$(this).height()-$("#mengdiv").height()
+			}
+			$("#mengdiv").css({left:x,top:y})
+
+			var scale=$(".big").width()/$("#mengdiv").width();
+			var bigx=x*-scale;
+			var bigy=y*-scale;
+			$(".big").css({"background-position":bigx+"px "+bigy+"px"})
+			console.log(scale)
+		})
+		$(this).mouseout(function(){
+			$("#mengdiv").hide()
+			$(".big").hide()
+		})
+	})
+		
+
+
+
+		//var index=$(page).index($(this))
+		//获取他的索引致
+		//查找函数回调autoplay那个功能
+
+		// $(pages).mouseover(function(){
+		// 	var index=$(page).index($(this))
+		// 	myswiper.slideTo(index);
+		// 	myswiper.stopAutoplay();
+		//  this.className+=" red"
+		// })
+		// $(pages).mouseout(function(){
+		// 	myswiper.startAutoplay();
+		// })
+</script>
+</html>
